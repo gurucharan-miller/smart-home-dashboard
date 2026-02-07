@@ -1,0 +1,364 @@
+:root {
+    --bg:#fffdfc;
+    --card: #f4f4f0;
+    --accent: #060607;
+    --text: #333;
+    --muted: #f4f4f0;
+}
+
+body {
+    margin: 2px;
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.dashboard-container {
+    width: 100vw;
+    height: 100vh;
+    background:#888274;
+    border-radius: 40px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 50px 120px rgba(19, 10, 10, 0.12);
+}
+
+.sidebar {
+    width: 70px;
+    height: 100%;
+    background:#96493b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    border-right: 1px solid #eee;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.logo {
+    font-size: 32px;
+}
+
+.nav-links {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    flex-grow: 1;
+    color: white;
+}
+
+.nav-links i {
+    font-size: 26px;
+    color: var(--muted);
+    cursor: pointer;
+    transition: 0.3s;
+    color: white;
+}
+
+.nav-links i.active,
+.nav-links i:hover {
+    color: var(--accent);
+    transform: scale(1.2);
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.content-grid {
+    flex-grow: 1;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1.5fr 1fr;
+    gap: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.card {
+    background: var(--card);
+    backdrop-filter: blur(12px);
+    border-radius: 30px;
+    padding: 20px;
+    border: 1px solid rgba(255,255,255,0.25);
+    transition: 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+.live-view {
+    grid-column: 1 / 2;
+    position: relative;
+    padding: 0;
+    width: 600px;
+    height: 500px;
+    transition: 0.25s ease;
+}
+
+.live-view1 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    position: relative;
+    padding: 0;
+    width: 600px;
+    height: 500px;
+    transition: 0.25s ease;
+}
+
+.live-view2 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    position: relative;
+    padding: 0;
+    width: 600px;
+    height: 500px;
+    transition: 0.25s ease;
+}
+
+.live-view img,
+.live-view1 img,
+.live-view2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.live-overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.badge {
+    background: #fff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.dot {
+    width: 4px;
+    height: 4px;
+    background: red;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.status-group {
+    display: flex;
+    gap: 10px;
+}
+.rooms-list-card,
+.rooms-list-card-2,
+.rooms-list-card-3{
+    width:150px;
+    height:350px;
+    background:#ca8a4e;
+    overflow-y: hidden;
+    padding: 50px;
+    border-radius: 20px;
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;  
+    transition: 0.25s ease;
+}
+
+.rooms-list-card{
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+    margin: 40px 0 20px;
+}
+
+.rooms-list-card-2{
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    margin: 40px 0 20px;
+}
+
+.rooms-list-card-3{
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+    margin: 40px 0 20px;
+}
+
+.live-view:hover,
+.rooms-list-card:hover,
+.live-view1:hover,
+.rooms-list-card-2:hover,
+.live-view2:hover,
+.rooms-list-card-3:hover,
+.vacuum-card-card:hover,
+.lamp-card-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+.status-group span {
+    background:#EAE6D2;
+    padding: 8px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+.rooms-list-card h3,
+.rooms-list-card-2 h3,
+.rooms-list-card-3 h3 {
+    margin-top: 0;
+}
+
+.room-item {
+    background:#EAE6D2;
+    padding: 12px 15px;
+    border-radius: 15px;
+    margin-top: 10px;
+    width: 80%;
+    text-align: center;
+    display:inline-block;
+    justify-content:center;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;  
+}
+.room-item.active {
+    background: #000;
+    color: #fff;
+}
+.add-btn {
+    width: 50%;
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 12px;
+    background: var(--accent);
+    color: #fff;
+    cursor: pointer;
+}
+
+.lamp-card-card {
+    width: 500px;
+    height: 350px;
+    padding: 50px;
+    border-radius: 30px;
+    color: #fff;
+    transition: 0.25s ease;
+}
+.vacuum-card-card {
+    background: linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.15)), url("vaccum.jpeg");
+    background-size: cover;
+    background-position: center;
+    width: 500px;
+    height: 350px;
+    padding: 50px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.25s ease;
+}
+.lamp-card-card {
+    background: linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.15)), #5F4A8B;
+    width: 500px;
+    height: 350px;
+    padding: 50px;
+    border-radius: 30px;
+}
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stats-row {
+    margin-top: auto;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.stat span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.lamp-visual {
+    font-size: 60px;
+    text-align: center;
+    margin: 20px 0;
+    height: 140px;
+    border-radius: 18px;
+    background: url("bulb.jpeg") center/contain no-repeat;
+}
+
+.music-card {
+    text-align: center;
+}
+
+.album-art img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.controls i {
+    font-size: 32px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.switch {
+    position: relative;
+    width: 46px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+    background: #ccc;
+    border-radius: 50px;
+    transition: .4s;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background: var(--accent);
+}
+
+input:checked + .slider:before {
+    transform: translateX(22px);
+}

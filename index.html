@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <nav class="sidebar">
+      <video src="home.mp4" style="width: 30px; height: 30px;" autoplay muted loop>HOME</video>
+
+
+
+
+        <div class="nav-links">
+            <i class="ph ph-squares-four-fill active"></i>
+            <i class="ph ph-lightbulb"></i>
+            <i class="ph ph-music-notes"></i>
+            <i class="ph ph-thermometer"></i>
+            <i class="ph ph-shield-check"></i>
+            <i class="ph ph-bell"></i>
+        </div>
+
+        <div class="settings">
+            <i class="ph ph-gear"></i>
+            <img src="tan.jpeg" class="avatar">
+        </div>
+    </nav>
+
+    <main class="content-grid">
+
+        <section class="live-view card">
+            <div class="live-overlay">
+                <span class="badge"><span class="dot"></span> Live</span>
+
+                <div class="status-group">
+                    <span><i class="ph ph-thermometer"></i> 24&deg;C</span>
+                    <span><i class="ph ph-drop"></i> 50%</span>
+                    <span><i class="ph ph-lightning"></i> 350W</span>
+                </div>
+            </div>
+
+            <img src="house.jpeg" id="main-room-image">
+           
+        </section>
+
+        <section class="rooms-list-card">
+            <h3>Rooms</h3>
+
+            <button type="button" class="room-item" data-images="bedroom.jpeg"><span>BEDROOM 1</span></button><br>
+            <button type="button" class="room-item" data-images="bedroom 2.jpeg"><span>BEDROOM 2</span></button><br>
+            <button type="button" class="room-item" data-images="kitchen.jpeg"><span>KITCHEN</span></button><br>
+            <button type="button" class="room-item" data-images="living area.jpeg"><span>Living AREA</span></button><br>
+            <button type="button" class="room-item" data-images="bathroom.jpeg"><span>BATHROOM</span></button><br>
+            <button class="add-btn">+ ADD HOME</button>
+        </section>
+
+        <section class="live-view1 card">
+            <div class="live-overlay">
+                <span class="badge"><span class="dot"></span> Live</span>
+
+                <div class="status-group">
+                    <span><i class="ph ph-thermometer"></i> 24&deg;C</span>
+                    <span><i class="ph ph-drop"></i> 50%</span>
+                    <span><i class="ph ph-lightning"></i> 350W</span>
+                </div>
+            </div>
+
+            <img src="house.jpeg" id="main-room-image-2">
+           
+        </section>
+        <br>
+
+        <section class="rooms-list-card-2">
+            <h3>Rooms</h3>
+
+            <button type="button" class="room-item" data-images="bedroom1.jpeg"><span>BEDROOM 1</span></button><br>
+            <button type="button" class="room-item" data-images="bedroom 2.jpeg"><span>BEDROOM 2</span></button><br>
+            <button type="button" class="room-item" data-images="kitchen1.jpeg"><span>KITCHEN</span></button><br>
+            <button type="button" class="room-item" data-images="livingroom1.jpeg"><span>LIVING AREA</span></button><br>
+            <button type="button" class="room-item" data-images="bathroom1.jpeg"><span>BATHROOM</span></button><br>
+            <button class="add-btn">+ ADD HOME</button>
+        </section>
+
+        <section class="live-view2 card">
+            <div class="live-overlay">
+                <span class="badge"><span class="dot"></span> Live</span>
+
+                <div class="status-group">
+                    <span><i class="ph ph-thermometer"></i> 24&deg;C</span>
+                    <span><i class="ph ph-drop"></i> 50%</span>
+                    <span><i class="ph ph-lightning"></i> 350W</span>
+                </div>
+            </div>
+
+            <img src="house.jpeg" id="main-room-image-3">
+           
+        </section>
+        <br>
+
+        <section class="rooms-list-card-3">
+            <h3>Rooms</h3>
+
+            <button type="button" class="room-item" data-images="bedroom.jpeg"><span>BEDROOM 1</span></button><br>
+            <button type="button" class="room-item" data-images="bedroom 2.jpeg"><span>BEDROOM 2</span></button><br>
+            <button type="button" class="room-item" data-images="kitchen.jpeg"><span>KITCHEN</span></button><br>
+            <button type="button" class="room-item" data-images="living area.jpeg"><span>LIVING AREA</span></button><br>
+            <button type="button" class="room-item" data-images="bathroom.jpeg"><span>BATHROOM</span></button><br>
+            <button class="add-btn">+ ADD HOME</button>
+        </section>
+    </main>
+</div>
+</body>
+</html>
